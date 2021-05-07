@@ -1,22 +1,25 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import productData from "../data/productData";
+import tycoonData from "../data/tycoonData";
 import Product from "./Product";
 
 function ProductList() {
-  let productCount = productData.map((product) => {
-    return 0;
-  });
+  const { id } = useParams();
+  const selectedTycoon = tycoonData.find((tycoon) => tycoon.id == id);
 
-  const [count, setCount] = useState(productCount);
-  const [leftMoney, setLeftMoney] = useState(100000000);
+  const [productCount, setProductCount] = useState(
+    new Array(productData.length).fill(0)
+  );
+  const [leftMoney, setLeftMoney] = useState(selectedTycoon.wealth);
 
   function handleBuyClick(id, price) {
     if (price <= leftMoney) {
       setLeftMoney((prevLeftMoney) => prevLeftMoney - price);
-      setCount((prevCount) => {
-        let newCount = [...prevCount];
-        newCount[id] += 1;
-        return newCount;
+      setProductCount((prevProductCount) => {
+        let newProductCount = [...prevProductCount];
+        newProductCount[id] += 1;
+        return newProductCount;
       });
     } else {
       //not enough money code[alert]
@@ -24,12 +27,12 @@ function ProductList() {
   }
 
   function handleSellClick(id, price) {
-    if (count[id] > 0) {
+    if (productCount[id] > 0) {
       setLeftMoney((prevLeftMoney) => prevLeftMoney + price);
-      setCount((prevCount) => {
-        let newCount = [...prevCount];
-        newCount[id] -= 1;
-        return newCount;
+      setProductCount((prevProductCount) => {
+        let newProductCount = [...prevProductCount];
+        newProductCount[id] -= 1;
+        return newProductCount;
       });
     } else {
       //nothing to sell code[alert]
@@ -41,12 +44,13 @@ function ProductList() {
       <Product
         key={product.id}
         info={product}
-        productAmount={count[product.id]}
+        productAmount={productCount[product.id]}
         handleBuyClick={handleBuyClick}
         handleSellClick={handleSellClick}
       />
     );
   });
+
   return (
     <div className="product-list">
       <h1>ProductList</h1>
