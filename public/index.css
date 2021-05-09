@@ -2,7 +2,7 @@
 
 :root {
   /* custom properties */
-  --clr-primary: rgb(194, 237, 243);
+  --clr-primary: rgb(201, 253, 201);
   --clr-secondary: white;
   --clr-accent: rgb(252, 80, 74);
   --fs-1: 2rem;
@@ -59,19 +59,41 @@ nav button:hover {
   color: var(--clr-secondary);
 }
 
-.title {
+.tycoon-list-title {
   font-weight: bolder;
   margin: var(--spacing-1) 0;
   text-align: center;
 }
 
-.title h1 {
+.tycoon-list-title h1 {
   font-size: var(--fs-1);
   font-style: italic;
+  position: relative;
 }
 
-.title p {
+.tycoon-list-title h1::before {
+  background-color: var(--clr-accent);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  height: 3px;
+  width: 30%;
+}
+
+.tycoon-list-title h1::after {
+  background-color: var(--clr-accent);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  height: 3px;
+  width: 30%;
+}
+
+.tycoon-list-title p {
   font-size: var(--fs-2);
+  margin: var(--spacing-2);
 }
 
 .card {
@@ -104,7 +126,8 @@ img {
   padding-left: var(--spacing-2);
 }
 
-.tycoon img {
+.tycoon img,
+.product-list-title img {
   border-radius: 50%;
   border: solid var(--clr-accent) 3px;
   box-shadow: 0 0 0.5rem black;
@@ -139,11 +162,24 @@ img {
   color: var(--clr-secondary);
 }
 
-.tycoon-list {
+.tycoon-list-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: var(--spacing-1);
   padding: var(--spacing-1);
+}
+
+.product-list-title {
+  margin-bottom: var(--spacing-2);
+  display: flex;
+  justify-content: center;
+}
+
+.product-list-title p {
+  font-size: var(--fs-2);
+  padding-left: var(--spacing-1);
+  margin-left: var(--spacing-1);
+  border-left: solid var(--clr-accent) 3px;
 }
 
 .left-money {
@@ -208,9 +244,31 @@ img {
   background-color: var(--clr-accent);
   color: var(--clr-secondary);
 }
-.product-list {
+.product-list-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: var(--spacing-1);
   padding: var(--spacing-1);
+}
+
+.footer {
+  background-color: var(--clr-accent);
+  font-size: var(--fs-2);
+  margin-top: var(--spacing-1);
+  padding: var(--spacing-2);
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .product-list-content,
+  .tycoon-list-content {
+    margin: 0 calc(4 * var(--spacing-1));
+  }
+}
+
+@media (max-width: 700px) {
+  .product-list-title {
+    align-items: center;
+    flex-direction: column;
+  }
 }
