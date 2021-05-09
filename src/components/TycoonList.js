@@ -7,12 +7,7 @@ function TycoonList() {
     return <Tycoon key={tycoon.id} info={tycoon} />;
   });
 
-  return (
-    <div className="tycoon-list">
-      <h1>Tycoon List</h1>
-      {tycoons}
-    </div>
-  );
+  return <div className="tycoon-list">{tycoons}</div>;
 }
 
 export default TycoonList;

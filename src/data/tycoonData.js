@@ -27,6 +27,20 @@ const tycoonData = [
     wealth: 1000000,
     description: "Iron Man of Real Life",
   },
+  {
+    id: 4,
+    imgUrl: "./assets/images/musk.jpg",
+    name: "Elon Musk",
+    wealth: 1000000,
+    description: "Iron Man of Real Life",
+  },
+  {
+    id: 5,
+    imgUrl: "./assets/images/musk.jpg",
+    name: "Elon Musk",
+    wealth: 1000000,
+    description: "Iron Man of Real Life",
+  },
 ];
 
 export default tycoonData;

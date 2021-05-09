@@ -1,23 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+
+:root {
+  /* custom properties */
+  --clr-primary: rgb(194, 237, 243);
+  --clr-secondary: white;
+  --clr-accent: rgb(252, 80, 74);
+  --fs-1: 2rem;
+  --fs-2: 1.3rem;
+  --spacing-1: 2rem;
+  --spacing-2: 1rem;
+  --spacing-3: 0.5rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  background-color: var(--clr-primary);
+  font-family: "Lobster Two", cursive;
+}
+
+button {
+  align-self: center;
+  background-color: inherit;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--fs-2);
+  font-weight: bold;
+  justify-self: center;
+  outline: none;
+  transition: 0.7s;
+}
+
+a {
+  color: inherit;
+  display: block;
+  padding: var(--spacing-3) var(--spacing-1);
+  text-decoration: none;
+}
+
+nav {
+  padding: var(--spacing-2) 0;
+  text-align: center;
+}
+
+nav button {
+  border: solid var(--clr-accent) 2px;
+  background-color: var(--clr-secondary);
+  color: var(--clr-accent);
+}
+
+nav button:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary);
+}
+
+.title {
+  font-weight: bolder;
+  margin: var(--spacing-1) 0;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: var(--fs-1);
+  font-style: italic;
+}
+
+.title p {
+  font-size: var(--fs-2);
+}
+
+.card {
+  background-color: var(--clr-secondary);
+  box-shadow: 5px 5px var(--clr-accent);
+  border-radius: 10px;
+  display: grid;
+}
+
+img {
+  border: solid var(--clr-accent) 3px;
+  border-radius: 50%;
+  box-shadow: 0 0 0.5rem black;
+  height: 120px;
+  justify-self: center;
+  object-fit: contain;
+  width: 120px;
+}
+
 .tycoon {
+  grid-template: 1em repeat(7, 60px) 1em/1em 1fr 1em;
+}
+
+.tycoon * {
+  grid-column: 2;
+}
+
+.tycoon .name {
+  border-left: solid black 3px;
+  font-size: var(--fs-2);
+  font-weight: bold;
+  grid-row: 2;
+  padding-left: var(--spacing-2);
+}
+
+.tycoon img {
+  grid-row: 3 / span 2;
+}
+
+.tycoon .tycoon-wealth {
+  grid-row: 5;
+  padding: var(--spacing-2) 0;
+}
+
+.tycoon-wealth span {
+  color: var(--clr-accent);
+  font-style: italic;
+  font-weight: bold;
+}
+
+.tycoon .description {
+  grid-row: 6 / span 2;
+}
+
+.tycoon button {
+  border: solid var(--clr-accent) 2px;
+  grid-row: 8;
+}
+
+.tycoon button:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary);
 }
 
 .tycoon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: var(--spacing-1);
+  padding: var(--spacing-1);
+}
+
+.left-money {
+  background-color: var(--clr-accent);
+  position: sticky;
+  padding: var(--spacing-2);
+  text-align: center;
+  top: 0;
+  width: 100vw;
 }
 
 .product {
+  align-items: center;
+  grid-template: 1em repeat(5, 70px) 1em/1em repeat(3, 1fr) 1em;
+  justify-items: center;
 }
 
+.product * {
+  grid-column: 2 / span 3;
+}
+.product .name {
+  font-size: 1.5rem;
+  grid-row: 2;
+}
+
+.product img {
+  grid-row: 3 / span 2;
+}
+
+.product .price {
+  font-style: italic;
+  font-weight: bold;
+  grid-row: 5;
+}
+
+.product .buy-btn {
+  border: solid green 2px;
+  grid-row: 6;
+  grid-column: 2/3;
+  padding: var(--spacing-3) var(--spacing-1);
+}
+
+.buy-btn:hover {
+  background-color: green;
+  color: var(--clr-secondary);
+}
+
+.product .count {
+  font-size: var(--fs-1);
+  grid-row: 6;
+  grid-column: 3/4;
+}
+
+.product .sell-btn {
+  border: solid var(--clr-accent) 2px;
+  grid-row: 6;
+  grid-column: 4/5;
+  padding: var(--spacing-3) var(--spacing-1);
+}
+
+.sell-btn:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary);
+}
 .product-list {
-}
-
-.buy-btn {
-}
-
-.sell-btn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: var(--spacing-1);
+  padding: var(--spacing-1);
 }

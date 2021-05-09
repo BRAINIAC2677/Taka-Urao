@@ -52,10 +52,9 @@ function ProductList() {
   });
 
   return (
-    <div className="product-list">
-      <h1>ProductList</h1>
-      <h1>{leftMoney}</h1>
-      {products}
+    <div>
+      <h1 className="left-money">$ {leftMoney}</h1>
+      <div className="product-list">{products}</div>
     </div>
   );
 }

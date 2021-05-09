@@ -5,10 +5,10 @@ function Product(props) {
   const { productAmount, handleBuyClick, handleSellClick } = props;
 
   return (
-    <div className="product">
-      <img src={imgUrl} alt={name} />
+    <div className="product card">
       <div className="name">{name}</div>
-      <div className="price">{price}</div>
+      <img src={imgUrl} alt={name} />
+      <div className="price">$ {price}</div>
       <button className="buy-btn" onClick={() => handleBuyClick(id, price)}>
         Buy
       </button>
