@@ -9,7 +9,7 @@ function Tycoon(props) {
       <div className="name">{name}</div>
       <img src={imgUrl} alt={name} />
       <div className="tycoon-wealth">
-        Net Worth: <span>$ {wealth}</span>
+        Net Worth: <span>$ {wealth} billions</span>
       </div>
       <div className="description">{description}</div>
       <button>

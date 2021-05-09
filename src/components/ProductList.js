@@ -11,7 +11,9 @@ function ProductList() {
   const [productCount, setProductCount] = useState(
     new Array(productData.length).fill(0)
   );
-  const [leftMoney, setLeftMoney] = useState(selectedTycoon.wealth);
+  const [leftMoney, setLeftMoney] = useState(
+    selectedTycoon.wealth * 1000000000
+  );
 
   function handleBuyClick(id, price) {
     if (price <= leftMoney) {

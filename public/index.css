@@ -82,13 +82,10 @@ nav button:hover {
 }
 
 img {
-  border: solid var(--clr-accent) 3px;
-  border-radius: 50%;
-  box-shadow: 0 0 0.5rem black;
-  height: 120px;
+  height: 100%;
   justify-self: center;
   object-fit: contain;
-  width: 120px;
+  width: 100%;
 }
 
 .tycoon {
@@ -108,7 +105,13 @@ img {
 }
 
 .tycoon img {
+  border-radius: 50%;
+  border: solid var(--clr-accent) 3px;
+  box-shadow: 0 0 0.5rem black;
   grid-row: 3 / span 2;
+  height: 120px;
+  object-fit: cover;
+  width: 120px;
 }
 
 .tycoon .tycoon-wealth {
