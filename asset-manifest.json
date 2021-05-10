@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Taka-Urao/static/js/main.2f374220.chunk.js",
-    "main.js.map": "/Taka-Urao/static/js/main.2f374220.chunk.js.map",
+    "main.js": "/Taka-Urao/static/js/main.74998b7d.chunk.js",
+    "main.js.map": "/Taka-Urao/static/js/main.74998b7d.chunk.js.map",
     "runtime-main.js": "/Taka-Urao/static/js/runtime-main.a8d0f43b.js",
     "runtime-main.js.map": "/Taka-Urao/static/js/runtime-main.a8d0f43b.js.map",
     "static/js/2.d4f95276.chunk.js": "/Taka-Urao/static/js/2.d4f95276.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.a8d0f43b.js",
     "static/js/2.d4f95276.chunk.js",
-    "static/js/main.2f374220.chunk.js"
+    "static/js/main.74998b7d.chunk.js"
   ]
 }
