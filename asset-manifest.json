@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/Taka-Urao/static/js/main.74998b7d.chunk.js",
-    "main.js.map": "/Taka-Urao/static/js/main.74998b7d.chunk.js.map",
+    "main.js": "/Taka-Urao/static/js/main.12334141.chunk.js",
+    "main.js.map": "/Taka-Urao/static/js/main.12334141.chunk.js.map",
     "runtime-main.js": "/Taka-Urao/static/js/runtime-main.a8d0f43b.js",
     "runtime-main.js.map": "/Taka-Urao/static/js/runtime-main.a8d0f43b.js.map",
-    "static/js/2.d4f95276.chunk.js": "/Taka-Urao/static/js/2.d4f95276.chunk.js",
-    "static/js/2.d4f95276.chunk.js.map": "/Taka-Urao/static/js/2.d4f95276.chunk.js.map",
+    "static/js/2.0c4d1732.chunk.js": "/Taka-Urao/static/js/2.0c4d1732.chunk.js",
+    "static/js/2.0c4d1732.chunk.js.map": "/Taka-Urao/static/js/2.0c4d1732.chunk.js.map",
     "index.html": "/Taka-Urao/index.html",
-    "static/js/2.d4f95276.chunk.js.LICENSE.txt": "/Taka-Urao/static/js/2.d4f95276.chunk.js.LICENSE.txt"
+    "static/js/2.0c4d1732.chunk.js.LICENSE.txt": "/Taka-Urao/static/js/2.0c4d1732.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a8d0f43b.js",
-    "static/js/2.d4f95276.chunk.js",
-    "static/js/main.74998b7d.chunk.js"
+    "static/js/2.0c4d1732.chunk.js",
+    "static/js/main.12334141.chunk.js"
   ]
 }
