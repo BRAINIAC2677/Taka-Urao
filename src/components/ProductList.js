@@ -6,6 +6,7 @@ import Product from "./Product";
 
 function ProductList() {
   const { id } = useParams();
+  console.log(id);
   const selectedTycoon = tycoonData.find((tycoon) => tycoon.id == id);
 
   const [productCount, setProductCount] = useState(
