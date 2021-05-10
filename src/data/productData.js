@@ -9,7 +9,7 @@ const productData = [
     id: 1,
     name: "iPad Pro",
     price: 899,
-    imgUrl: "./assets/images/iPad.jfif",
+    imgUrl: "./assets/images/ipad.jfif",
   },
   {
     id: 2,
