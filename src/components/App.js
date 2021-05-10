@@ -9,7 +9,7 @@ function App() {
     <div className="app">
       <nav>
         <button>
-          <Link to="/Taka-Urao">Home</Link>
+          <Link to="/Taka-Urao/">Home</Link>
         </button>
       </nav>
 
