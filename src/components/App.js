@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Link, Switch, Route } from "react-router-dom";
 import ProductList from "./ProductList";
 import TycoonList from "./TycoonList";
 import Footer from "./Footer";
@@ -7,24 +7,16 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="app">
-      <nav>
-        <button>
-          <Link to="/Taka-Urao/">Home</Link>
-        </button>
-      </nav>
-
-      <Switch>
-        <Route exact path="/Taka-Urao">
-          <div>
+      <Router basename="/">
+        <Switch>
+          <Route exact path="/">
             <TycoonList />
-          </div>
-        </Route>
-        <Route path="/Taka-Urao/:id">
-          <div>
+          </Route>
+          <Route path="/:id">
             <ProductList />
-          </div>
-        </Route>
-      </Switch>
+          </Route>
+        </Switch>
+      </Router>
 
       <Footer />
     </div>

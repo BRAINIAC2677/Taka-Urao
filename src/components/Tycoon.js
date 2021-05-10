@@ -13,7 +13,7 @@ function Tycoon(props) {
       </div>
       <div className="description">{description}</div>
       <button>
-        <Link to={`/Taka-Urao/${id}`}>Hit it</Link>
+        <Link to={`/${id}`}>Hit it</Link>
       </button>
     </div>
   );

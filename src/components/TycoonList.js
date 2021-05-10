@@ -8,7 +8,7 @@ function TycoonList() {
   });
 
   return (
-    <div>
+    <React.Fragment>
       <div className="tycoon-list-title">
         <h1>compra tu sueño</h1>
         <p>
@@ -17,7 +17,7 @@ function TycoonList() {
         </p>
       </div>
       <div className="tycoon-list-content">{tycoons}</div>
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import productData from "../data/productData";
 import tycoonData from "../data/tycoonData";
 import Product from "./Product";
@@ -55,14 +55,19 @@ function ProductList() {
   });
 
   return (
-    <div>
+    <React.Fragment>
+      <nav>
+        <button>
+          <Link to="/">Home</Link>
+        </button>
+      </nav>
       <div className="product-list-title">
         <img src={selectedTycoon.imgUrl} alt="" />
         <p>{`Spend from ${selectedTycoon.name}. Don't be shy.`}</p>
       </div>
       <h1 className="left-money">$ {leftMoney}</h1>
       <div className="product-list-content">{products}</div>
-    </div>
+    </React.Fragment>
   );
 }
 
