@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+
+:root {
+  /* custom properties */
+  --clr-primary: rgb(201, 253, 201);
+  --clr-secondary: white;
+  --clr-accent: rgb(252, 80, 74);
+  --fs-1: 2rem;
+  --fs-2: 1.3rem;
+  --spacing-1: 2rem;
+  --spacing-2: 1rem;
+  --spacing-3: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-primary);
+  font-family: "Lobster Two", cursive;
+}
+
+button {
+  align-self: center;
+  background-color: inherit;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--fs-2);
+  font-weight: bold;
+  justify-self: center;
+  outline: none;
+  transition: 0.7s;
+}
+
+a {
+  color: inherit;
+  display: block;
+  padding: var(--spacing-3) var(--spacing-1);
+  text-decoration: none;
+}
+
+nav {
+  padding: var(--spacing-2) 0;
+  text-align: center;
+}
+
+nav button {
+  border: solid var(--clr-accent) 2px;
+  background-color: var(--clr-secondary);
+  color: var(--clr-accent);
+}
+
+nav button:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary);
+}
+
+.tycoon-list-title {
+  font-weight: bolder;
+  margin: var(--spacing-1) 0;
+  text-align: center;
+}
+
+.tycoon-list-title h1 {
+  font-size: var(--fs-1);
+  font-style: italic;
+  position: relative;
+}
+
+.tycoon-list-title h1::before {
+  background-color: var(--clr-accent);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  height: 3px;
+  width: 30%;
+}
+
+.tycoon-list-title h1::after {
+  background-color: var(--clr-accent);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  height: 3px;
+  width: 30%;
+}
+
+.tycoon-list-title p {
+  font-size: var(--fs-2);
+  margin: var(--spacing-2);
+}
+
+.card {
+  background-color: var(--clr-secondary);
+  box-shadow: 5px 5px var(--clr-accent);
+  border-radius: 10px;
+  display: grid;
+}
+
+img {
+  height: 100%;
+  justify-self: center;
+  object-fit: contain;
+  width: 100%;
+}
+
+.tycoon {
+  grid-template: 1em repeat(7, 60px) 1em/1em 1fr 1em;
+}
+
+.tycoon * {
+  grid-column: 2;
+}
+
+.tycoon .name {
+  border-left: solid black 3px;
+  font-size: var(--fs-2);
+  font-weight: bold;
+  grid-row: 2;
+  padding-left: var(--spacing-2);
+}
+
+.tycoon img,
+.product-list-title img {
+  border-radius: 50%;
+  border: solid var(--clr-accent) 3px;
+  box-shadow: 0 0 0.5rem black;
+  grid-row: 3 / span 2;
+  height: 120px;
+  object-fit: cover;
+  width: 120px;
+}
+
+.tycoon .tycoon-wealth {
+  grid-row: 5;
+  padding: var(--spacing-2) 0;
+}
+
+.tycoon-wealth span {
+  color: var(--clr-accent);
+  font-style: italic;
+  font-weight: bold;
+}
+
+.tycoon .description {
+  grid-row: 6 / span 2;
+}
+
+.tycoon button {
+  border: solid var(--clr-accent) 2px;
+  grid-row: 8;
+}
+
+.tycoon button:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary);
+}
+
+.tycoon-list-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: var(--spacing-1);
+  padding: var(--spacing-1);
+}
+
+.product-list-title {
+  margin-bottom: var(--spacing-2);
+  display: flex;
+  justify-content: center;
+}
+
+.product-list-title p {
+  font-size: var(--fs-2);
+  padding-left: var(--spacing-1);
+  margin-left: var(--spacing-1);
+  border-left: solid var(--clr-accent) 3px;
+}
+
+.left-money {
+  background-color: var(--clr-accent);
+  position: sticky;
+  padding: var(--spacing-2);
+  text-align: center;
+  top: 0;
+  width: 100vw;
+}
+
+.product {
+  align-items: center;
+  grid-template: 1em repeat(5, 70px) 1em/1em repeat(3, 1fr) 1em;
+  justify-items: center;
+}
+
+.product * {
+  grid-column: 2 / span 3;
+}
+.product .name {
+  font-size: 1.5rem;
+  grid-row: 2;
+}
+
+.product img {
+  grid-row: 3 / span 2;
+}
+
+.product .price {
+  font-style: italic;
+  font-weight: bold;
+  grid-row: 5;
+}
+
+.product .buy-btn {
+  border: solid green 2px;
+  grid-row: 6;
+  grid-column: 2/3;
+  padding: var(--spacing-3) var(--spacing-1);
+}
+
+.buy-btn:hover {
+  background-color: green;
+  color: var(--clr-secondary);
+}
+
+.product .count {
+  font-size: var(--fs-1);
+  grid-row: 6;
+  grid-column: 3/4;
+}
+
+.product .sell-btn {
+  border: solid var(--clr-accent) 2px;
+  grid-row: 6;
+  grid-column: 4/5;
+  padding: var(--spacing-3) var(--spacing-1);
+}
+
+.sell-btn:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary);
+}
+.product-list-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: var(--spacing-1);
+  padding: var(--spacing-1);
+}
+
+.footer {
+  background-color: var(--clr-accent);
+  font-size: var(--fs-2);
+  margin-top: var(--spacing-1);
+  padding: var(--spacing-2);
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .product-list-content,
+  .tycoon-list-content {
+    margin: 0 calc(4 * var(--spacing-1));
+  }
+}
+
+@media (max-width: 700px) {
+  .product-list-title {
+    align-items: center;
+    flex-direction: column;
+  }
+}
